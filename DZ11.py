@@ -15,8 +15,14 @@ class DZ11(unittest.TestCase):
         self.login(wd)
         self.open_groups_page(wd)
         self.create_group(wd)
-        wd.find_element_by_link_text("group page").click()
+        self.return_to_group_page(wd)
+        self.logout(wd)
+
+    def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
+
+    def return_to_group_page(self, wd):
+        wd.find_element_by_link_text("group page").click()
 
     def create_group(self, wd):
         # init group creation
