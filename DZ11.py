@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import NoAlertPresentException
+#from selenium.common.exceptions import NoSuchElementException
+#from selenium.common.exceptions import NoAlertPresentException
 import unittest
 from group import Group
 
@@ -66,15 +66,15 @@ class DZ11(unittest.TestCase):
     def open_home_page(self, wd):
         wd.get("http://localhost/addressbook/")
 
-    def is_element_present(self, how, what):
-        try: self.wd.find_element(by=how, value=what)
-        except NoSuchElementException as e: return False
-        return True
+    #def is_element_present(self, how, what):
+     #   try: self.wd.find_element(by=how, value=what)
+      #  except NoSuchElementException as e: return False
+       # return True
     
-    def is_alert_present(self):
-        try: self.wd.switch_to_alert()
-        except NoAlertPresentException as e: return False
-        return True
+ #   def is_alert_present(self):
+  #      try: self.wd.switch_to_alert()
+   #     except NoAlertPresentException as e: return False
+    #    return True
     
 
     def tearDown(self):
