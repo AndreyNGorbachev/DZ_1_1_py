@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-from selenium import webdriver
+from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest
 
 class DZ11(unittest.TestCase):
     def setUp(self):
-        self.wd = webdriver.Firefox()
+        self.wd = WebDriver()
         self.wd.implicitly_wait(30)
 
     def test_d_z11(self):
